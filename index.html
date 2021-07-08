@@ -11,17 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
     <title>Venki</title>
-    <meta name="description" content="I am venki ~ I am hot">
-    <meta name="og:image" content="https://media.discordapp.net/attachments/680060569314918460/852760788920696842/android-icon-192x192-dunplab-manifest-35313.png">
-    <meta name="theme_color" content="#fdf6f6">
-    <link rel="shortcut icon" href="https://media.discordapp.net/attachments/680060569314918460/852760788920696842/android-icon-192x192-dunplab-manifest-35313.png">
-    <meta name="og:title" content="Venki's Biography">
+    <meta name="description" content="i like donut 🍩 i ate it in the marning. vary yummi 🤤">
+    <meta name="og:description" content="i like donut 🍩 i ate it in the marning. vary yummi 🤤">
+    <meta name="og:image" content="">
+    <meta name="theme-color" content="#fdf6f6">
+    <link rel="icon" href="PUT CUM URL HERE">
+    <meta name="og:title" content="Venki">
 </head>
 <style>
     :root {
-        --background: #fff;
-        --text: #000;
-        --links: rgb(243, 120, 120);
+        --background: #000;
+        --text: #fff;
+        --links: rgb(124, 113, 228);
     }
     body {
 background: var(--background);
@@ -33,7 +34,7 @@ font-family: 'Rubik', sans-serif;
     margin-top: 3rem;
     padding: 2rem;
     text-align: center;
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 @media (min-width: 768px) {
   .container {
@@ -47,18 +48,29 @@ a {
 text-decoration: none;
 color: var(--links);
 transition-duration: .5s;
+z-index: 1;
 }
 a:hover {
 text-decoration: none;
 color: var(--text);
 transition-duration: .5s;
+z-index: 1;
+}
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--background);
 }
 </style>
 <body>
+    <div class="fullscreen">
+    </div>
     <div class="container">
           <p style="font-size: 76px; margin-bottom: 0; margin-top: 0; font-weight: 700;">Venki</p>
           <p style="font-size: 32px; font-weight: 700; margin-bottom: 0; margin-top: 1rem;"><i>I am god ~ bow down</i></p>
-          <p style="font-size: 12px; font-weight: 500; margin-top: 0;"><a role="button" id="theme"><i class="fas fa-sm fa-sun"></i> Theme</a></p>
+          <p style="font-size: 12px; font-weight: 500; margin-top: 0;"><a role="button" id="theme"><i class="fas fa-sm fa-moon"></i> Theme</a></p>
           <p style="font-size: 18px; font-weight: 100;">Yes I am gamer I pro study I go tuitions I god <i class="fas fa-sm fa-thumbs-up"></i> I play vla for a living and I'm pro video editor on Sony Vegaz <i class="fas fa-sm fa-laptop"></i></p>
           <p style="font-size: 18px; font-weight: 100;">I do coke with <a target="_blank" href="https://instagram.com/cing_hates_life" title="cing_hates_life on instagram">@cing</a> and its a lot of fun yes <i class="fas fa-sm fa-wine-glass"></i>
           and also check out my <a href="https://bit.ly/venkyonyt" target="_blank" title="Venky on YouTube">YouTube Channel</a> <i class="fas fa-sm fa-tv"></i> and not to forget this <i>very</i> beautiful platform Instagram <a href="https://instagram.com/venkywho" target="_blank" title="@venkywho on instagram">@venkywho</a> <i class="fas fa-sm fa-mobile"></i></p>
@@ -67,20 +79,21 @@ transition-duration: .5s;
 </body>
 <script>
     window.onload = function() {
-        let c = 0;
-        $("#theme").on('click', () => {
+        $(".fullscreen").fadeOut();
+        let c = 1;
+        $("#theme").on('click', async() => {
             if(c == 0) {
-                $(":root").css("--background", "#000");
-                $(":root").css("--text", "#fff");
-                $(":root").css("--links", "rgb(124, 113, 228)");
+                await $(":root").css("--background", "#000");
+                await $(":root").css("--text", "#fff");
+                await $(":root").css("--links", "rgb(124, 113, 228)");
                 c = 1;
-                $("#theme").html('<i class="fas fa-sm fa-sun"></i> Theme');
+                await $("#theme").html('<i class="fas fa-sm fa-moon"></i> Theme');
             } else {
-                $(":root").css("--background", "#fff");
-                $(":root").css("--text", "#000");
-                $(":root").css("--links", "rgb(243, 120, 120)");
+                await $(":root").css("--background", "#fff");
+                await $(":root").css("--text", "#000");
+                await $(":root").css("--links", "rgb(243, 120, 120)");
                 c = 0;
-                $("#theme").html('<i class="fas fa-sm fa-sun"></i> Theme');
+                await $("#theme").html('<i class="fas fa-sm fa-sun"></i> Theme');
             }
         })
         console.log("%cWhy u come in da console", "color: rgb(243, 120, 120); font-size: 2rem;");
